@@ -32,6 +32,7 @@ class Question(db.Model):
     __tablename__ = "questions"
 
     question_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    difficulty = db.Column(db.Float, nullable=True)
     #Fields below are examples of other data that may be recorded in this table
     #prompt = db.Column(db.String(64), nullable=True)
     #correct_answer = db.Column(db.String(64), nullable=True)
@@ -63,7 +64,7 @@ class Student(db.Model):
 
 
 class StudentQuestion(db.Model):
-    """Association table for students and classes."""
+    """Association table for students and questions."""
     #Data from usage.csv file is in this table
 
     __tablename__ = "students_questions"
@@ -77,6 +78,36 @@ class StudentQuestion(db.Model):
         """Provide helpful representation when printed."""
 
         return "<StudentQuestion student_question_id=%s student_id=%s question_id=%s" % (self.student_question_id, self.student_id, self.question_id)
+
+
+class Strand(db.Model):
+    """Content Strands"""
+
+    __tablename__ = "strands"
+
+    strand_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    strand_name = db.Column(db.String(64), nullable=True)
+    
+    def __repr__(self):
+        """Provide helpful representation when printed."""
+
+        return "<Strand strand_id=%s strand_name=%s>" % (self.strand_id, self.stand_name)
+
+
+class Standards(db.Model):
+    """Content Standards"""
+
+    __tablename__ = "standards"
+
+    standard_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    standard_name = db.Column(db.String(64), nullable=True)
+    
+    def __repr__(self):
+        """Provide helpful representation when printed."""
+
+        return "<Standard standard_id=%s standard_name=%s>" % (self.standard_id, self.standard_name)
+
+
 
 ##############################################################################
 # Helper functions
