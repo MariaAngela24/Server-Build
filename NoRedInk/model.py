@@ -72,7 +72,8 @@ class StudentQuestion(db.Model):
     student_question_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     student_id = db.Column(db.Integer, db.ForeignKey('students.student_id'))
     question_id = db.Column(db.Integer, db.ForeignKey('questions.question_id'))
-
+    assigned_hours_ago = db.Column(db.Integer, nullable=True)
+    answered_hours_ago = db.Column(db.Integer, nullable=True)
 
     def __repr__(self):
         """Provide helpful representation when printed."""
