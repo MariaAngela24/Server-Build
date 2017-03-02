@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html>
+
+  <head>
+
+
+
+  </head>
+
+  <body>
+
+
+
+  </body>
+</html>
+
+
+
+<title>Title</title>
+<div>
+  <h2>Hello World</h2>
+    <div class="scroll">
+      <h3>Page 1</h3>
+        <p>Content here...</p>
+          <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- <a href="example-page2.html">next page</a> -->
+            $('.infinite-scroll').jscroll();
+    </div>
+     
+
+
+
+<!-- <div class="container bs-docs-container">
+  <div class="row">
+     <div class="col-md-9" role="main">
+        <div class="bs-docs-section">
+          <h2 id="average-self-ratings" class="page-header">My Learning Over Time</h2>
+          At the beginning and end of every class, you answered several surveys. The questions in those surveys asked you to rate how well you understood the learning objectives that were covered in class. This map shows the average of all your answers for each learning objective. <br><br>  
+          <div class="learning-map">
+            <canvas id="lineChart"></canvas>
+            <div id="lineLegend" class="chart-legend"></div>
+          </div>
+
+          <h2 id="objective-counts" class="page-header">How Much Have I Learned?</h2>
+          This map shows the total number of objectives that you understand well, the total number of objectives that you partially understand, and the total number of objectives that you do not understand. <br><br>
+          <div class="learning-map">
+            <canvas id="donutChart"></canvas>
+            <div id="donutLegend" class="chart-legend"></div>
+        </div>
+      </div>
+    </div> -->
+  
+        
+  <script>
+    
+
+      // var options = {
+      //   responsive: true
+      // };
+
+      // // Make Line Chart of average self-ratings over time
+      // var ctx_line = $("#lineChart").get(0).getContext("2d");
+
+      // $.get("/objective-averages.json", function (data) {
+      //   var myLineChart = Chart.Line(ctx_line, {
+      //                                 data: data,
+      //                                 options: {
+      //                                   scales: {
+      //                                     yAxes:[{
+      //                                       ticks: {
+      //                                         max: 5,
+      //                                         min: 0,
+      //                                         stepSize: 1
+      //                                       }
+      //                                     }]
+      //                                   }
+      //                                 }
+      //                             });
+      //   // Uncomment line below to add legend
+      //   // $("#lineLegend").html(myLineChart.generateLegend());
+      // });
+
+
+      // // Make Donut Chart 
+      // var ctx_donut = $("#donutChart").get(0).getContext("2d");
+
+      // $.get("/objective-counts.json", function (data) {
+      //   var myDonutChart = new Chart(ctx_donut, {
+      //                                           type: 'doughnut',
+      //                                           data: data,
+      //                                           options: options
+      //                                         });
+      //   // $('#donutLegend').html(myDonutChart.generateLegend());
+      // });
+  </script>
+
+     <!--  <div class="col-md-3" role="complementary">
+        <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix-top">
+              <br><br>
+              <h4><b>IMPORTANT DATES</b><h4>
+              <h4><b>Midterm:</b> Thursday, Oct. 20</h4>
+              <h4><b>Final:</b> Tuesday, Dec. 13</h4>
+              <h4><b>Lab Assessments:</b></h4>
+                  <p>Quiz 1 - Friday, Sept. 9</p>
+                  <p>Lab 1 - Friday, Sept. 16</p>
+                  <p>Quiz 2 - Friday, Sept. 23</p>
+                  <p>Quiz 3 - Friday, Sept. 30</p>
+                  <p>Lab 2 - Friday, Oct. 14</p>
+        </nav>
+                        
+      </div> -->
+</div>
+    
